@@ -221,73 +221,6 @@ Get-ADDomainController -Discover
 
 
 
-# Obtém os membros da lista permitida ou negada da política de replicação de senha de um controlador de domínio RODC do Active Directory.
-
-
-
-
-# Obtém os membros da lista permitida da política de replicação de senha de um controlador de domínio somente leitura (RODC).
-
-
-Get-ADDomainControllerPasswordReplicationPolicy -Identity ADDSRODC1 -Allowed
-
-
-<# 
-
-
-Explicação do comando: Get-ADDomainControllerPasswordReplicationPolicy -Identity ADDSRODC1 -Allowed
-
-
-Get-ADDomainControllerPasswordReplicationPolicy - Obtém os membros da lista permitida ou negada da política de replicação de senha de um controlador de domínio somente leitura.
-
--Identity ADDSRODC1 - Especifica um objeto de controlador de domínio do Active Directory fornecendo um dos seguintes valores.
-
-O identificador entre parênteses é o nome de exibição do Lightweight Directory Access Protocol (LDAP) para o atributo.
-
-Os valores aceitáveis para este parâmetro são:
-
-Um GUID (objectGUID)
-Um Endereço IPV4
-Um Endereço IPV6 Global
-Um nome de host DNS (dNSHostName)
-Um nome do objeto do servidor
-Um nome distinto do objeto de configurações NTDS
-Um nome distinto do objeto do servidor que representa o controlador de domínio
-Um GUID do objeto de configurações NTDS na partição de configuração
-Um GUID do objeto do servidor na partição de configuração
-Um nome distinto do objeto de computador que representa o controlador de domínio
-
-
-O comando pesquisa o contexto de nomenclatura padrão ou a partição para localizar o objeto.
-Se dois ou mais objetos forem encontrados, o cmdlet retornará um erro sem finalização.
-Esse parâmetro também pode obter esse objeto por meio do pipeline ou você pode definir esse parâmetro para uma instância de objeto.
-
-
--Allowed - Especifica na pesquisa os usuários, computadores, grupos ou outras contas às quais é permitido o direito de replicar suas senhas para este controlador de domínio somente leitura (RODC).
-
-
-#>
-
-
-# Obtém os membros da lista permitida da política de replicação de senha de um controlador de domínio somente leitura (RODC).
-
-
-Get-ADDomainControllerPasswordReplicationPolicy -Identity ADDSRODC1 -Denied
-
-
-<# 
-
-
-Explicação do comando: Get-ADDomainControllerPasswordReplicationPolicy -Identity ADDSRODC1 -Denied
-
-
--Denied - Especifica na pesquisa os usuários, computadores, grupos ou outras contas às quais é negado o direito de replicar suas senhas para este controlador de domínio somente leitura (RODC).
-
-
-#>
-
-
-
 # Adiciona usuários, computadores, grupos ou outras conta à lista permitida de uma diretiva de replicação de senha de controlador de domínio somente leitura (RODC).
 
 
@@ -511,6 +444,71 @@ Um nome distinto
 Um GUID (objectGUID)
 Um identificador de segurança (objectSid)
 Um nome de conta do Security Accounts Manager (SAM)(sAMAccountName)
+
+
+#>
+
+# Obtém os membros da lista permitida ou negada da política de replicação de senha de um controlador de domínio RODC do Active Directory.
+
+
+
+
+# Obtém os membros da lista permitida da política de replicação de senha de um controlador de domínio somente leitura (RODC).
+
+
+Get-ADDomainControllerPasswordReplicationPolicy -Identity ADDSRODC1 -Allowed
+
+
+<# 
+
+
+Explicação do comando: Get-ADDomainControllerPasswordReplicationPolicy -Identity ADDSRODC1 -Allowed
+
+
+Get-ADDomainControllerPasswordReplicationPolicy - Obtém os membros da lista permitida ou negada da política de replicação de senha de um controlador de domínio somente leitura.
+
+-Identity ADDSRODC1 - Especifica um objeto de controlador de domínio do Active Directory fornecendo um dos seguintes valores.
+
+O identificador entre parênteses é o nome de exibição do Lightweight Directory Access Protocol (LDAP) para o atributo.
+
+Os valores aceitáveis para este parâmetro são:
+
+Um GUID (objectGUID)
+Um Endereço IPV4
+Um Endereço IPV6 Global
+Um nome de host DNS (dNSHostName)
+Um nome do objeto do servidor
+Um nome distinto do objeto de configurações NTDS
+Um nome distinto do objeto do servidor que representa o controlador de domínio
+Um GUID do objeto de configurações NTDS na partição de configuração
+Um GUID do objeto do servidor na partição de configuração
+Um nome distinto do objeto de computador que representa o controlador de domínio
+
+
+O comando pesquisa o contexto de nomenclatura padrão ou a partição para localizar o objeto.
+Se dois ou mais objetos forem encontrados, o cmdlet retornará um erro sem finalização.
+Esse parâmetro também pode obter esse objeto por meio do pipeline ou você pode definir esse parâmetro para uma instância de objeto.
+
+
+-Allowed - Especifica na pesquisa os usuários, computadores, grupos ou outras contas às quais é permitido o direito de replicar suas senhas para este controlador de domínio somente leitura (RODC).
+
+
+#>
+
+
+# Obtém os membros da lista permitida da política de replicação de senha de um controlador de domínio somente leitura (RODC).
+
+
+Get-ADDomainControllerPasswordReplicationPolicy -Identity ADDSRODC1 -Denied
+
+
+<# 
+
+
+Explicação do comando: Get-ADDomainControllerPasswordReplicationPolicy -Identity ADDSRODC1 -Denied
+
+
+-Denied - Especifica na pesquisa os usuários, computadores, grupos ou outras contas às quais é negado o direito de replicar suas senhas para este controlador de domínio somente leitura (RODC).
 
 
 #>
